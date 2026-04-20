@@ -2,3 +2,7 @@ title: Compression Challenge
 description: A competition for compressing 3D microscopy images.
 theme: minima
 markdown: kramdown
+collections:
+  pages:
+    output: true
+    permalink: /:path/
