@@ -3,6 +3,7 @@ layout: default
 title: Organizers
 permalink: /organizers/
 ---
+
 ## Organizers 
 
 This competition is hosted by the Allen Institute for Neural Dynamics. 

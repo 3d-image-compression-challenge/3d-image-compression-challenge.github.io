@@ -7,7 +7,7 @@ permalink: /timeline/
 ## Timeline 
 
 ### Competition Phase
-- **June**  
+- **July**  
   - 🚀 **Competition Launch**: Competition and website go live.  
   - 🛠 **Development Phase Opens**: Participants access training and initial test datasets to begin developing their models.
 
