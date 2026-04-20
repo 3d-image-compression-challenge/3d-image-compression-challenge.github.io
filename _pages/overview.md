@@ -1,3 +1,9 @@
+---
+layout: default
+title: Overview
+permalink: /overview/
+---
+
 # Compression Challenge on 3D Microscopy Images
 
 ## Welcome to the Challenge

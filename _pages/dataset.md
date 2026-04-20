@@ -1,3 +1,9 @@
+---
+layout: default
+title: Dataset
+permalink: /dataset/
+---
+
 ## Dataset
 
 The dataset for this challenge consists of **10 training blocks** and **5 test blocks**, which are 3D cutouts from high-resolution whole-brain microscopy images. These blocks were collected using the ExaSPIM light sheet microscope and are provided in **OME-Zarr format**. Accompanying each image block are SWC files that represent the skeletons of the segmented neurons, which are used to evaluate segmentation accuracy. 

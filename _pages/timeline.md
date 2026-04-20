@@ -1,3 +1,9 @@
+---
+layout: default
+title: Timeline
+permalink: /timeline/
+---
+
 ## Timeline 
 
 ### Competition Phase
