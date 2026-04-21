@@ -3,18 +3,11 @@ layout: default
 title: Dataset
 permalink: /dataset/
 ---
-
----
-layout: default
-title: Dataset
-permalink: /dataset/
----
-
 ## Dataset
 
 The dataset comes from whole mouse brains imaged with the [ExaSPIM](https://alleninstitute.org/news/scientific-overview-exa-spim/) light sheet microscope at the Allen Institute for Neural Dynamics. A subset of neurons in each brain are fluorescently labeled, allowing us to trace their shapes and connections across the entire brain in 3D.
 
-# to do - include some sample images 
+(to do - include some sample images) 
 
 Because whole-brain images are large (~20 TB each), we've broken the data into smaller **3D blocks**, for the challenge. Each block is a cutout from one of these whole-brain images and contains labeled neurons along with their surrounding tissue.
 

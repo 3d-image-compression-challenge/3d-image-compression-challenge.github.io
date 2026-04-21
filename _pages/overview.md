@@ -3,15 +3,6 @@ layout: default
 title: Overview
 permalink: /overview/
 ---
-
-# Compression Challenge on 3D Microscopy Images
-
----
-layout: default
-title: Overview
-permalink: /overview/
----
-
 # Compression Challenge on 3D Microscopy Images
 
 ## Welcome
