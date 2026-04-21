@@ -4,13 +4,30 @@ title: Dataset
 permalink: /dataset/
 ---
 
+---
+layout: default
+title: Dataset
+permalink: /dataset/
+---
+
 ## Dataset
 
-The dataset for this challenge consists of **10 training blocks** and **5 test blocks**, which are 3D cutouts from high-resolution whole-brain microscopy images. These blocks were collected using the ExaSPIM light sheet microscope and are provided in **OME-Zarr format**. Accompanying each image block are SWC files that represent the skeletons of the segmented neurons, which are used to evaluate segmentation accuracy. 
+The dataset comes from whole mouse brains imaged with the [ExaSPIM](https://alleninstitute.org/news/scientific-overview-exa-spim/) light sheet microscope at the Allen Institute for Neural Dynamics. A subset of neurons in each brain are fluorescently labeled, allowing us to trace their shapes and connections across the entire brain in 3D.
 
-The dataset is hosted on [S3](https://open.quiltdata.com/b/aind-benchmark-data/tree/3d-image-compression/). 
+# to do - include some sample images 
 
-### Key Details
-- **Training Blocks**: Used to develop and test your compression algorithms.
-- **Test Blocks**: Used for evaluation during the development phase of the competition. 
-- **Held-out Blocks**: Used for final evaluation of the competition. Released 1 week before competition ends. 
+Because whole-brain images are large (~20 TB each), we've broken the data into smaller **3D blocks**, for the challenge. Each block is a cutout from one of these whole-brain images and contains labeled neurons along with their surrounding tissue.
+
+Each block is provided in **OME-Zarr format**, a standard for large-scale 3D image data. Alongside each block, we provide **segmentations** and **SWC files** (which describe the traced shapes and skeletons of neurons). These were generated using a lightweight [segmentation pipeline](https://github.com/AllenNeuralDynamics/segmentation-skeleton-metrics) developed for the challenge — a streamlined version of the production pipeline used at the Allen Institute that produces realistic segmentation performance. Together, these files serve as ground truth for evaluating how well compressed images preserve biological strucutures needed for downstream analysis. 
+
+### Train/Test/Held-Out Blocks
+
+The blocks are split into train, test, held-out groups for the competition. 
+
+- **10 training blocks** — for developing and testing your compression algorithms.
+- **5 test blocks** — used for evaluation during the development phase.
+- **Held-out blocks** — used for final evaluation, released one week before the competition ends.
+
+### Accessing the Data
+
+The dataset is publicly available hosted on [S3](https://open.quiltdata.com/b/aind-benchmark-data/tree/3d-image-compression/). For instructions on downloading and working with the data, see the [README](https://open.quiltdata.com/b/aind-benchmark-data/tree/3d-image-compression/README.md) 

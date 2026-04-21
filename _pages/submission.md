@@ -24,4 +24,11 @@ Submissions are made through the [Codabench competition page](add link when read
 4. **Submit on Codabench**  
 Upload your ZIP file to the Codabench platform for scoring.
 
+### Evaluation
+
+Submissions are scored on:
+- **Compression ratio** — how much the file size is reduced.
+- **Image quality** — measured by Structural Similarity Index (SSIM ≥ 0.9).
+- **Segmentation accuracy** — how well the compressed data preserves neuron structures for downstream analysis.
+
 For detailed submissions instruction and information on the segmentation pipeline, visit our [GitHub repository](https://github.com/AllenNeuralDynamics/image-compression-challenge).
