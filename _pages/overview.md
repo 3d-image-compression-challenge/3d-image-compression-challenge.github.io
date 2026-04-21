@@ -8,9 +8,9 @@ permalink: /overview/
 
 ## Welcome 
 
-How does the brain enable complex behaviors like learning and decision-making? How do networks of neurons process information to give rise to perception and action? These are core questions in neuroscience and answering them requires mapping the brain's circuits, the connections between neurons. 
+How does the brain enable complex behaviors like learning and decision-making? How do networks of neurons process information to give rise to perception and action? These are core open questions in neuroscience that the Allen Institute for Neural Dynamics is working to answer. A key step toward addressing these questions is mapping the brain's circuits -- identifying which neurons are connected and the types of connections they form. 
 
-Recent breakthroughs in light sheet microscopy, such as the ExaSPIM developed at the Allen Institute for Neural Dynamics, enables researchers to image whole, intact mouse brains at single-cell resolution. This technology allows to reconstruct the wiring diagram of neurons in the mouse brain in a whole brain context for the first time. 
+Recent breakthroughs in light sheet microscopy, such as the [ExaSPIM](https://alleninstitute.org/news/scientific-overview-exa-spim/) developed at the Allen Institute for Neural Dynamics, enables researchers to image whole, intact mouse brains at single-cell resolution. This technology allows scientists to reconstruct the wiring diagram of neurons across the entire mouse brain at an unprecedented scale. 
 
 These breakthroughs come with a challenge: imaging each brain generates terabytes of data (~20TB/brain), and mapping complete circuits requires imaging multiple brains. The size of these datasets creates significant barriers to data accessibility. 
 
