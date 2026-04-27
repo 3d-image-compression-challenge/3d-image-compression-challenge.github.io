@@ -11,7 +11,7 @@ The dataset comes from whole mouse brains imaged with the [ExaSPIM](https://alle
 
 Because whole-brain images are large (~20 TB each), we've broken the data into smaller **3D blocks**, for the challenge. Each block is a cutout from one of these whole-brain images and contains labeled neurons along with their surrounding tissue.
 
-Each block is provided in **OME-Zarr format**, a standard for large-scale 3D image data. Alongside each block, we provide **segmentations** and **SWC files**, which describe the traced shapes and skeletons of neurons. These were generated using a lightweight [segmentation pipeline](https://github.com/AllenNeuralDynamics/segmentation-skeleton-metrics) developed for the challenge — a streamlined version of the production pipeline used at the Allen Institute that produces realistic segmentation performance. Together, these files serve as ground truth for evaluating how well compressed images preserve biological strucutures needed for downstream analysis. 
+Each block is provided in **OME-Zarr format**, a standard for large-scale 3D image data. Alongside each block, we provide **segmentations** and **SWC files**, which describe the traced shapes and skeletons of neurons. These were generated using a lightweight [segmentation pipeline](https://github.com/AllenNeuralDynamics/aind-exaspim-neuron-segmentation/tree/main) developed for the challenge — a streamlined version of the production pipeline used at the Allen Institute that produces realistic segmentation performance. Together, these files serve as ground truth for evaluating how well compressed images preserve biological structures needed for downstream analysis. 
 
 ### Train/Test/Held-Out Blocks
 

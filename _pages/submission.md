@@ -14,7 +14,7 @@ Submissions are made through the [Codabench competition page](add link when read
    Run your compression algorithm on the test dataset. Save both the compressed (any format) and decompressed (.tiff) versions of each block.
 
 2. **Generate Segmentations and Skeletons**  
-   Use the provided segmentation pipeline in our [GitHub repository](https://github.com/AllenNeuralDynamics/image-compression-challenge/blob/main/src/image_compression_challenge/generate_submission.py) to:
+   Use the provided segmentation pipeline in our [GitHub repository](https://github.com/AllenNeuralDynamics/image-compression-challenge/tree/main), see [generate_submission.py](https://github.com/AllenNeuralDynamics/image-compression-challenge/blob/main/src/image_compression_challenge/generate_submission.py) to:
    - Generate segmentations from the decompressed images.
    - Generate SWC files (neuron skeletons) from the segmentations.
 
