@@ -12,5 +12,4 @@ Anna Grim, Cameron Arshadi, Saskia de Vries, David Feng, Camilo Laiton, Su-Yee L
 
 ## Contact 
 
-Questions about the competition? Reach out to us at 
-# include email address 
+Questions about the competition? Reach out to us at [...]
