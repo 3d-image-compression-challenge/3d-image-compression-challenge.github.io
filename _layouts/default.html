@@ -42,6 +42,15 @@
       text-align: center;
       padding: 1rem 0;
     }
+    .hero-banner {
+      width: 100%;
+      overflow: hidden;
+    }
+    .hero-banner img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
   </style>
 </head>
 <body>
@@ -56,6 +65,12 @@
     <a href="/updates/">Updates</a>
     <a href="/organizers/">Organizers</a>
   </nav>
+  {% if page.url == "/" %}
+  <section class="hero-banner">
+    <img src="{{ site.baseurl }}/media/medulla_media.png"
+         alt="Neurons in the medulla within a whole-brain image" />
+  </section>
+  {% endif %}
   <main>
     {{ content }}
   </main>
