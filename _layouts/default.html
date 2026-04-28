@@ -3,79 +3,245 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Compression Challenge on 3D Microscopy Images</title>
+  <title>{% if page.title %}{{ page.title }} | {% endif %}Compression Challenge on 3D Microscopy Images</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    /* Basic styling for a clean design */
+    * { box-sizing: border-box; }
+
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       margin: 0;
       padding: 0;
-      line-height: 1.6;
+      line-height: 1.7;
+      color: #1f2937;
+      background: #fafafa;
     }
+
+    /* Header */
     header {
-      background: #333;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
       color: #fff;
-      padding: 1rem 0;
+      padding: 2rem 1rem;
       text-align: center;
+      border-bottom: 3px solid #3b82f6;
     }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    header .subtitle {
+      margin-top: 0.5rem;
+      font-size: 1rem;
+      color: #94a3b8;
+      font-weight: 400;
+    }
+
+    /* Navigation */
     nav {
-      background: #444;
-      color: #fff;
+      background: #1e293b;
       display: flex;
       justify-content: center;
-      padding: 0.5rem 0;
+      flex-wrap: wrap;
+      padding: 0.5rem 1rem;
+      gap: 0.25rem;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
     nav a {
-      color: #fff;
+      color: #cbd5e1;
       text-decoration: none;
-      margin: 0 1rem;
+      padding: 0.6rem 1.25rem;
+      border-radius: 4px;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: background 0.2s, color 0.2s;
     }
     nav a:hover {
-      text-decoration: underline;
-    }
-    main {
-      padding: 2rem;
-    }
-    footer {
-      background: #333;
+      background: rgba(59, 130, 246, 0.15);
       color: #fff;
-      text-align: center;
-      padding: 1rem 0;
     }
+    nav a.active {
+      background: #3b82f6;
+      color: #fff;
+    }
+
+    /* Hero banner (homepage / overview) */
     .hero-banner {
       width: 100%;
+      max-height: 400px;
       overflow: hidden;
+      position: relative;
     }
     .hero-banner img {
       width: 100%;
-      height: auto;
+      height: 100%;
+      object-fit: cover;
       display: block;
+    }
+    .hero-banner::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0) 60%, rgba(15,23,42,0.4) 100%);
+    }
+
+    /* Main content */
+    main {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+    }
+    main h1 {
+      font-size: 2.25rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin-top: 0;
+      letter-spacing: -0.025em;
+    }
+    main h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #0f172a;
+      margin-top: 2.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #e5e7eb;
+    }
+    main h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #1e293b;
+      margin-top: 1.75rem;
+    }
+    main p { margin: 1rem 0; }
+    main a {
+      color: #2563eb;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s;
+    }
+    main a:hover { border-bottom-color: #2563eb; }
+    main code {
+      background: #f1f5f9;
+      padding: 0.15rem 0.4rem;
+      border-radius: 3px;
+      font-size: 0.9em;
+      font-family: 'SF Mono', Monaco, monospace;
+    }
+    main pre {
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 1.25rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      font-size: 0.9em;
+    }
+    main blockquote {
+      border-left: 4px solid #3b82f6;
+      padding-left: 1.25rem;
+      margin: 1.5rem 0;
+      color: #475569;
+      font-style: italic;
+    }
+    main ul, main ol { padding-left: 1.5rem; }
+    main li { margin: 0.4rem 0; }
+
+    /* Inline images */
+    main img {
+      max-width: 100%;
+      border-radius: 6px;
+      margin: 1.5rem 0;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    }
+
+    /* Figures with captions */
+    .figure {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .figure figcaption {
+      font-size: 0.9rem;
+      color: #64748b;
+      margin-top: 0.5rem;
+    }
+
+    /* Card grid (for things like "explore the pages" on overview) */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+      margin: 2rem 0;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 1.5rem;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    .card h3 { margin: 0 0 0.5rem; }
+    .card a { font-weight: 600; }
+
+    /* Footer */
+    footer {
+      background: #0f172a;
+      color: #94a3b8;
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 4rem;
+      font-size: 0.9rem;
+    }
+    footer a { color: #60a5fa; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.5rem; }
+      nav { padding: 0.5rem; gap: 0; }
+      nav a { padding: 0.5rem 0.8rem; font-size: 0.9rem; }
+      main { padding: 2rem 1.25rem; }
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Compression Challenge on 3D Microscopy Images</h1>
+    <div class="subtitle">A NeurIPS 2025 Competition · Allen Institute for Neural Dynamics</div>
   </header>
+
   <nav>
-    <a href="/overview/">Overview</a>
-    <a href="/dataset/">Dataset</a>
-    <a href="/submission/">Submission</a>
-    <a href="/timeline/">Timeline</a>
-    <a href="/updates/">Updates</a>
-    <a href="/organizers/">Organizers</a>
+    <a href="{{ site.baseurl }}/overview/">Overview</a>
+    <a href="{{ site.baseurl }}/dataset/">Dataset</a>
+    <a href="{{ site.baseurl }}/submission/">Submission</a>
+    <a href="{{ site.baseurl }}/timeline/">Timeline</a>
+    <a href="{{ site.baseurl }}/updates/">Updates</a>
+    <a href="{{ site.baseurl }}/organizers/">Organizers</a>
   </nav>
-  {% if page.url == "/" %}
+
+  {% if page.url == "/" or page.url == "/overview/" %}
   <section class="hero-banner">
     <img src="{{ site.baseurl }}/media/medulla_media.png"
          alt="Neurons in the medulla within a whole-brain image" />
   </section>
   {% endif %}
+
   <main>
     {{ content }}
   </main>
+
   <footer>
-    <p>&copy; Compression Challenge</p>
+    <p>&copy; 2025 Compression Challenge · Hosted by the <a href="https://alleninstitute.org/division/neural-dynamics/">Allen Institute for Neural Dynamics</a></p>
+    <p>
+      <a href="https://github.com/AllenNeuralDynamics/image-compression-challenge">GitHub</a> ·
+      <a href="#">Codabench</a>
+    </p>
   </footer>
 </body>
 </html>
