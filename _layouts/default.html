@@ -17,25 +17,50 @@
       background: #fafafa;
     }
 
-    /* Header */
+    /* Header with hero image background */
     header {
-      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      position: relative;
+      background: #0f172a;
       color: #fff;
-      padding: 2rem 1rem;
+      padding: 5rem 1rem;
       text-align: center;
       border-bottom: 3px solid #3b82f6;
+      overflow: hidden;
+    }
+    header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: url("{{ site.baseurl }}/media/medulla_media.png");
+      background-size: cover;
+      background-position: center;
+      opacity: 0.5;
+      z-index: 0;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(15,23,42,0.6) 0%, rgba(15,23,42,0.85) 100%);
+      z-index: 1;
+    }
+    header > * {
+      position: relative;
+      z-index: 2;
     }
     header h1 {
       margin: 0;
-      font-size: 2rem;
+      font-size: 2.25rem;
       font-weight: 700;
       letter-spacing: -0.02em;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.4);
     }
     header .subtitle {
-      margin-top: 0.5rem;
-      font-size: 1rem;
-      color: #94a3b8;
+      margin-top: 0.75rem;
+      font-size: 1.05rem;
+      color: #cbd5e1;
       font-weight: 400;
+      text-shadow: 0 1px 4px rgba(0,0,0,0.4);
     }
 
     /* Navigation */
@@ -67,26 +92,6 @@
     nav a.active {
       background: #3b82f6;
       color: #fff;
-    }
-
-    /* Hero banner (homepage / overview) */
-    .hero-banner {
-      width: 100%;
-      max-height: 400px;
-      overflow: hidden;
-      position: relative;
-    }
-    .hero-banner img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-    .hero-banner::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, rgba(0,0,0,0) 60%, rgba(15,23,42,0.4) 100%);
     }
 
     /* Main content */
@@ -168,7 +173,7 @@
       margin-top: 0.5rem;
     }
 
-    /* Card grid (for things like "explore the pages" on overview) */
+    /* Card grid */
     .card-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -203,6 +208,7 @@
 
     /* Responsive */
     @media (max-width: 600px) {
+      header { padding: 3rem 1rem; }
       header h1 { font-size: 1.5rem; }
       nav { padding: 0.5rem; gap: 0; }
       nav a { padding: 0.5rem 0.8rem; font-size: 0.9rem; }
@@ -225,13 +231,6 @@
     <a href="{{ site.baseurl }}/organizers/">Organizers</a>
   </nav>
 
-  {% if page.url == "/" or page.url == "/overview/" %}
-  <section class="hero-banner">
-    <img src="{{ site.baseurl }}/media/medulla_media.png"
-         alt="Neurons in the medulla within a whole-brain image" />
-  </section>
-  {% endif %}
-
   <main>
     {{ content }}
   </main>
@@ -240,7 +239,7 @@
     <p>&copy; 2026 Compression Challenge · Hosted by the <a href="https://alleninstitute.org/division/neural-dynamics/">Allen Institute for Neural Dynamics</a></p>
     <p>
       <a href="https://github.com/AllenNeuralDynamics/image-compression-challenge">GitHub</a> ·
-      <a href="https://www.codabench.org">Codabench</a>
+      <a href="#">Codabench</a>
     </p>
   </footer>
 </body>

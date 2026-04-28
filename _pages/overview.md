@@ -3,8 +3,6 @@ layout: default
 title: Overview
 permalink: /overview/
 ---
-# Compression Challenge on 3D Microscopy Images
-
 ## Welcome
 
 How does the brain enable complex behaviors like learning and decision-making? How do networks of neurons process information to give rise to perception and action? These are core open questions in neuroscience that the Allen Institute for Neural Dynamics is working to answer. A key step toward addressing these questions is identifying which neurons are connected and the types of connections. Generating a comprehensive map of the circuits in the brain is foundational to understanding how the brain functions. 
