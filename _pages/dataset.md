@@ -21,4 +21,4 @@ The blocks are split into train, test, held-out groups for the competition.
 
 ### Accessing the Data
 
-The dataset is publicly available hosted on [S3](https://open.quiltdata.com/b/aind-benchmark-data/tree/3d-image-compression/). For instructions on downloading and working with the data, see the [README](https://open.quiltdata.com/b/aind-benchmark-data/tree/3d-image-compression/README.md) 
+The dataset is publicly hosted on [S3](https://open.quiltdata.com/b/aind-benchmark-data/tree/3d-image-compression/). For instructions on downloading and working with the data, see the [README](https://open.quiltdata.com/b/aind-benchmark-data/tree/3d-image-compression/README.md) 
