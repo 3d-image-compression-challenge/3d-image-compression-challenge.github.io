@@ -5,11 +5,11 @@ permalink: /dataset/
 ---
 ## Dataset
 
-The dataset comes from whole mouse brains imaged with the [ExaSPIM](https://alleninstitute.org/news/scientific-overview-exa-spim/) light sheet microscope at the Allen Institute for Neural Dynamics. A subset of neurons in each brain are fluorescently labeled, allowing researchers to trace their shapes and connections in 3D. 
+The dataset comes from whole mouse brains imaged with the [ExaSPIM](https://alleninstitute.org/news/scientific-overview-exa-spim/) light sheet microscope at the Neural Dynamics Accelerator at the Allen Institute. A subset of neurons in each brain are fluorescently labeled, allowing researchers to trace their shapes and connections in 3D. 
 
-Because whole-brain images are large (~20 TB each), we've broken the data into smaller **3D blocks**, for the challenge. Each block is a cutout from one of these whole-brain images and contains labeled neurons along with their surrounding tissue.
+Because whole-brain images are large (~120 TB each), we've broken the data into smaller **3D blocks**, for the challenge. Each block is a cutout from one of these whole-brain images and contains labeled neurons along with their surrounding tissue.
 
-Each block is provided in **OME-Zarr format**, a standard for large-scale 3D image data. Alongside each block, we provide **segmentations** and **SWC files**, which describe the traced shapes and skeletons of neurons. These were generated using a lightweight [segmentation pipeline](https://github.com/AllenNeuralDynamics/aind-exaspim-neuron-segmentation/tree/main) developed for the challenge — a streamlined version of the production pipeline used at the Allen Institute that produces realistic segmentation performance. Together, these files serve as ground truth for evaluating how well compressed images preserve biological structures needed for downstream analysis. 
+Each block is provided in **OME-Zarr format**, a standard for large-scale 3D image data. Alongside each block, we provide **segmentations** and **SWC files**, which describe the traced shapes and skeletons of neurons. These were generated using a lightweight [segmentation pipeline](https://github.com/AllenNeuralDynamics/aind-exaspim-neuron-segmentation/tree/main). Together, these files serve as ground truth for evaluating how well compressed images preserve biological structures needed for downstream analysis. 
 
 ### Train/Test/Held-Out Blocks
 

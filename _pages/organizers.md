@@ -6,7 +6,7 @@ permalink: /organizers/
 
 ## Organizers 
 
-This competition is hosted by the [Allen Institute for Neural Dynamics](https://www.allenneuraldynamics.org/). 
+This competition is hosted by the [Neural Dynamics Accelerator at the Allen Institute](https://www.allenneuraldynamics.org/). 
 
 Anna Grim, Cameron Arshadi, Saskia de Vries, David Feng, Camilo Laiton, Su-Yee Lee, Sharmishtaa Seshamani 
 
