@@ -8,7 +8,7 @@ permalink: /overview/
 
 <figure class="figure">
   <img src="{{ site.baseurl }}/media/exaspim-example.png" alt="ExA-SPIM image of a whole mouse brain with a zoom-in on a single neuron" />
-  <figcaption>An ExA-SPIM image of a whole mouse brain (left), with a zoomed-in view of an individual neuron (right).</figcaption>
+  <figcaption>An ExA-SPIM image of a whole mouse brain (left), with a zoomed-in view centered on an individual neuron (right).</figcaption>
 </figure>
 
 How does the brain enable complex behaviors like learning and decision-making? How do networks of neurons process information to give rise to perception and action? These are core open questions in neuroscience that the Neural Dynamics Accelerator at the Allen Institute is working to answer. A key step towards addressing these questions is identifying which neurons are connected and the structure of connections they form. Generating a comprehensive map of the circuits in the brain is foundational to understanding how the brain functions. 
