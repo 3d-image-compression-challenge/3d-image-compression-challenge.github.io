@@ -5,7 +5,7 @@ permalink: /overview/
 ---
 ## Welcome
 
-How does the brain enable complex behaviors like learning and decision-making? How do networks of neurons process information to give rise to perception and action? These are core open questions in neuroscience that the Neural Dynamics Accelerator at the Allen Institute is working to answer. A key step toward addressing these questions is identifying which neurons are connected and the types of connections. Generating a comprehensive map of the circuits in the brain is foundational to understanding how the brain functions. 
+How does the brain enable complex behaviors like learning and decision-making? How do networks of neurons process information to give rise to perception and action? These are core open questions in neuroscience that the Neural Dynamics Accelerator at the Allen Institute is working to answer. A key step towards addressing these questions is identifying which neurons are connected and the structure of connections they form. Generating a comprehensive map of the circuits in the brain is foundational to understanding how the brain functions. 
 
 Recent breakthroughs in light sheet microscopy, such as the [ExaSPIM](hhttps://alleninstitute.org/news/a-new-custom-built-microscope-is-capturing-stunning-views-of-the-brain/), enable researchers to image whole, intact mouse brains at single-cell resolution. These large-scale datasets now enable scientists to reconstruct circuits across the brain at an unprecedented scale. 
 
