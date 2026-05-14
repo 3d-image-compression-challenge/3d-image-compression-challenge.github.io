@@ -3,17 +3,28 @@ layout: default
 title: Dataset
 permalink: /dataset/
 ---
+
 ## Dataset
 
-The dataset comes from whole mouse brains imaged with the [ExA-SPIM](https://alleninstitute.org/news/scientific-overview-exa-spim/) light sheet microscope at the Neural Dynamics Accelerator at the Allen Institute. A subset of neurons in each brain are fluorescently labeled, allowing researchers to trace their shapes and connections in 3D. 
+<figure class="figure">
+  <img src="{{ site.baseurl }}/media/medulla_media.png" alt="Neurons in the medulla within a whole-brain image" />
+  <figcaption>Neurons in the medulla within a whole-brain image, captured with ExA-SPIM.</figcaption>
+</figure>
 
-Because whole-brain images are large (~120 TB each), we've broken the data into smaller **3D blocks**, for the challenge. Each block is a cutout from one of these whole-brain images and contains labeled neurons along with their surrounding tissue.
+The dataset comes from whole mouse brains imaged with the [ExA-SPIM](https://alleninstitute.org/news/scientific-overview-exa-spim/) light sheet microscope at the Neural Dynamics Accelerator at the Allen Institute. A subset of neurons in each brain are fluorescently labeled, allowing researchers to trace their shapes and connections in 3D. (Read more about how the data was generated and processed [here.](allenneuraldynamics.org/platforms/brain-wide-anatomy-at-cellular-resolution))
 
-Each block is provided in **OME-Zarr format**, a standard for large-scale 3D image data. Alongside each block, we provide **segmentations** and **SWC files**, which describe the traced shapes and skeletons of neurons. These were generated using the [segmentation pipeline](https://github.com/AllenNeuralDynamics/aind-exaspim-neuron-segmentation/tree/main). Together, these files serve as ground truth for evaluating how well compressed images preserve biological structures needed for downstream analysis. 
+Because whole-brain images are large (~120 TB each), we've broken the data into smaller **3D blocks** for the challenge. Each block is a cutout from one of these whole-brain images and contains labeled neurons along with their surrounding tissue.
+
+Each block is provided in **OME-Zarr format**, a standard for large-scale 3D image data. Alongside each block, we provide **segmentations** and **SWC files**, which describe the traced shapes and skeletons of neurons. These were generated using the [segmentation pipeline](https://github.com/AllenNeuralDynamics/aind-exaspim-neuron-segmentation/tree/main). Together, these files serve as ground truth for evaluating how well compressed images preserve biological structures needed for downstream analysis.
+
+<figure class="figure">
+  <img src="{{ site.baseurl }}/media/data-media.gif" alt="Visualization of a 3D image block from the dataset" />
+  <figcaption>Slices of a 3D image block from the dataset.</figcaption>
+</figure>
 
 ### Train/Test/Held-Out Blocks
 
-The blocks are split into train, test, held-out groups for the competition. 
+The blocks are split into train, test, held-out groups for the competition.
 
 - **10 training blocks** — for developing and testing your compression algorithms.
 - **5 test blocks** — used for evaluation during the development phase.
@@ -21,4 +32,4 @@ The blocks are split into train, test, held-out groups for the competition.
 
 ### Accessing the Data
 
-The dataset is publicly hosted on [S3](https://open.quiltdata.com/b/aind-benchmark-data/tree/3d-image-compression/). For instructions on downloading and working with the data, see the [README](https://open.quiltdata.com/b/aind-benchmark-data/tree/3d-image-compression/README.md) 
+The dataset is publicly hosted on [S3](https://open.quiltdata.com/b/aind-benchmark-data/tree/3d-image-compression/). For instructions on downloading and working with the data, see the [README](https://open.quiltdata.com/b/aind-benchmark-data/tree/3d-image-compression/README.md).
