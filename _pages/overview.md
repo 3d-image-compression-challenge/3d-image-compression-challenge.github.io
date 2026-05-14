@@ -17,7 +17,6 @@ Recent breakthroughs in light sheet microscopy, such as the [ExA-SPIM](hhttps://
 
 The catch is data size. Imaging a single brain generates terabytes of data (e.g. 120 TB/brain using ExaSPIM) and mapping circuits requires imaging many brains. Datasets at this scale are difficult and expensive to store, share, and analyze. 
 
-
 ## The Challenge
 
 We're looking for better ways to compress 3D microscopy images of whole brains. The goal is to reduce file sizes while keeping the image quality needed for downstream processing and analysis, like tracing and identifying the shapes of neurons in 3D. Better compression means greater data accessibility -- researchers can work with more data and share it more easily, accelerating the pace of scientific discovery. 
