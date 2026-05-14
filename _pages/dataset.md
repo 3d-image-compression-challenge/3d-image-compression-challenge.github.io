@@ -31,7 +31,7 @@ Each block is provided in **OME-Zarr format**, a standard for large-scale 3D ima
 <video controls style="max-width: 100%; border-radius: 6px;">
   <source src="{{ site.baseurl }}/media/annotations-compressed.mp4" type="video/mp4">
 </video>
-  <figcaption>Annotating the skeleton of a single neuron in a 3D image block.</figcaption>
+  <figcaption>Annotating the skeleton of individual neurons in a 3D image block.</figcaption>
 </figure>
 
 
