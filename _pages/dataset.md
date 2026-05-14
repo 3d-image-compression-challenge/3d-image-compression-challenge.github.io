@@ -10,10 +10,6 @@ permalink: /dataset/
   <img src="{{ site.baseurl }}/media/exaspim-flythru.gif" alt="A whole mouse brain with neurons labelled" />  <figcaption>A whole mouse brain with neurons labelled</figcaption>
 </figure>
 
-<figure class="figure">
-  <img src="{{ site.baseurl }}/media/exaspim-flythru-sagittal.mp4" alt="A whole mouse brain with neurons labelled" />  <figcaption>A whole mouse brain with neurons labelled</figcaption>
-</figure>
-
 The dataset comes from whole mouse brains imaged with the [ExA-SPIM](https://alleninstitute.org/news/scientific-overview-exa-spim/) light sheet microscope at the Allen Institute Neural Dynamics Accelerator. A subset of neurons in each brain are fluorescently labeled, allowing researchers to trace their shapes and connections in 3D. The data is largely sparse, but the labeled neuronal structures of interest can be very thin (single voxel) and have weak intensity boundaries — properties that make this a tractable, but challenging compression challenge. (Read more about how the data was generated and processed [here.](https://allenneuraldynamics.org/platforms/brain-wide-anatomy-at-cellular-resolution))
 
 <figure class="figure">
@@ -26,6 +22,7 @@ Because whole-brain images are large (~120 TB each), we've broken the data into 
 <figure class="figure">
   <img src="{{ site.baseurl }}/media/medulla_media.png" alt="Neurons in the medulla within a whole-brain image" />
   <figcaption>Neurons in the medulla within a whole-brain image, captured with ExA-SPIM.</figcaption>
+  </figure>
 
 
 Each block is provided in **OME-Zarr format**, a standard for large-scale 3D image data. Alongside each block, we provide **segmentations** and **SWC files**, which describe the traced shapes and skeletons of neurons. These were generated using the [segmentation pipeline](https://github.com/AllenNeuralDynamics/aind-exaspim-neuron-segmentation/tree/main). Together, these files serve as ground truth for evaluating how well compressed images preserve biological structures needed for downstream analysis.
