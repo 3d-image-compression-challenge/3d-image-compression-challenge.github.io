@@ -22,7 +22,7 @@ Because whole-brain images are large (~120 TB each), we've broken the data into 
 
 <figure class="figure">
   <img src="{{ site.baseurl }}/media/medulla_media.png" alt="Example 3D image block showing labeled neurons in the medulla region of the mouse brain" />
-  <figcaption>Example 3D image block showing labeled neurons in the medulla region.</figcaption>
+  <figcaption>Example stack of a 3D image block showing labeled neurons in the medulla region.</figcaption>
 </figure>
 
 Each block is provided in **OME-Zarr format**, a standard for large-scale 3D image data. Alongside each block, we provide **segmentations** (3D masks identifying which voxels belong to each neuron) and **SWC files** (graph representations of neuron skeletons). These were generated using our [segmentation pipeline](https://github.com/AllenNeuralDynamics/aind-exaspim-neuron-segmentation/tree/main) and serve as ground truth for evaluating how well compressed images preserve the biological structures needed for downstream analysis.
