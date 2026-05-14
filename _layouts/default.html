@@ -13,8 +13,8 @@
       margin: 0;
       padding: 0;
       line-height: 1.7;
-      color: #1f2937;
-      background: #fafafa;
+      color: #e5e7eb;
+      background: #0f172a;
     }
 
     /* Header with hero image background */
@@ -34,7 +34,7 @@
       background-image: url("{{ site.baseurl }}/media/medulla_media.png");
       background-size: cover;
       background-position: center;
-      opacity: 0.8;
+      opacity: 0.5;
       z-index: 0;
     }
     header::after {
@@ -74,7 +74,7 @@
       position: sticky;
       top: 0;
       z-index: 10;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     }
     nav a {
       color: #cbd5e1;
@@ -86,7 +86,7 @@
       transition: background 0.2s, color 0.2s;
     }
     nav a:hover {
-      background: rgba(59, 130, 246, 0.15);
+      background: rgba(59, 130, 246, 0.2);
       color: #fff;
     }
     nav a.active {
@@ -103,63 +103,69 @@
     main h1 {
       font-size: 2.25rem;
       font-weight: 700;
-      color: #0f172a;
+      color: #f1f5f9;
       margin-top: 0;
       letter-spacing: -0.025em;
     }
     main h2 {
       font-size: 1.5rem;
       font-weight: 600;
-      color: #0f172a;
+      color: #f1f5f9;
       margin-top: 2.5rem;
       padding-bottom: 0.5rem;
-      border-bottom: 2px solid #e5e7eb;
+      border-bottom: 2px solid #334155;
     }
     main h3 {
       font-size: 1.2rem;
       font-weight: 600;
-      color: #1e293b;
+      color: #e5e7eb;
       margin-top: 1.75rem;
     }
-    main p { margin: 1rem 0; }
+    main p {
+      margin: 1rem 0;
+      color: #cbd5e1;
+    }
     main a {
-      color: #2563eb;
+      color: #60a5fa;
       text-decoration: none;
       border-bottom: 1px solid transparent;
       transition: border-color 0.15s;
     }
-    main a:hover { border-bottom-color: #2563eb; }
+    main a:hover { border-bottom-color: #60a5fa; }
     main code {
-      background: #f1f5f9;
+      background: #1e293b;
+      color: #f1f5f9;
       padding: 0.15rem 0.4rem;
       border-radius: 3px;
       font-size: 0.9em;
       font-family: 'SF Mono', Monaco, monospace;
     }
     main pre {
-      background: #0f172a;
+      background: #020617;
       color: #e2e8f0;
       padding: 1.25rem;
       border-radius: 6px;
       overflow-x: auto;
       font-size: 0.9em;
+      border: 1px solid #1e293b;
     }
     main blockquote {
       border-left: 4px solid #3b82f6;
       padding-left: 1.25rem;
       margin: 1.5rem 0;
-      color: #475569;
+      color: #94a3b8;
       font-style: italic;
     }
-    main ul, main ol { padding-left: 1.5rem; }
+    main ul, main ol { padding-left: 1.5rem; color: #cbd5e1; }
     main li { margin: 0.4rem 0; }
+    main strong { color: #f1f5f9; }
 
     /* Inline images */
     main img {
       max-width: 100%;
       border-radius: 6px;
       margin: 1.5rem 0;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.4);
     }
 
     /* Figures with captions */
@@ -169,7 +175,7 @@
     }
     .figure figcaption {
       font-size: 0.9rem;
-      color: #64748b;
+      color: #94a3b8;
       margin-top: 0.5rem;
     }
 
@@ -181,30 +187,63 @@
       margin: 2rem 0;
     }
     .card {
-      background: #fff;
-      border: 1px solid #e5e7eb;
+      background: #1e293b;
+      border: 1px solid #334155;
       border-radius: 8px;
       padding: 1.5rem;
       transition: transform 0.15s, box-shadow 0.15s;
     }
     .card:hover {
       transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      border-color: #3b82f6;
     }
-    .card h3 { margin: 0 0 0.5rem; }
-    .card a { font-weight: 600; }
+    .card h3 { margin: 0 0 0.5rem; color: #f1f5f9; }
+    .card p { color: #cbd5e1; }
+    .card a { font-weight: 600; color: #60a5fa; }
 
     /* Footer */
     footer {
-      background: #0f172a;
+      background: #020617;
       color: #94a3b8;
       text-align: center;
       padding: 2rem 1rem;
       margin-top: 4rem;
       font-size: 0.9rem;
+      border-top: 1px solid #1e293b;
     }
     footer a { color: #60a5fa; text-decoration: none; }
     footer a:hover { text-decoration: underline; }
+
+    /* Tables */
+    main table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      background: #1e293b;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+    main th, main td {
+      padding: 0.75rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid #334155;
+    }
+    main th {
+      background: #020617;
+      color: #f1f5f9;
+      font-weight: 600;
+    }
+    main td {
+      color: #cbd5e1;
+    }
+
+    /* Horizontal rules */
+    main hr {
+      border: none;
+      border-top: 1px solid #334155;
+      margin: 2rem 0;
+    }
 
     /* Responsive */
     @media (max-width: 600px) {
